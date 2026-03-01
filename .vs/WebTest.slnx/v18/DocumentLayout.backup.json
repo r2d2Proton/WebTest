@@ -90,8 +90,7 @@
               "ViewState": "AgIAABsAAAAAAAAAAAAswC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-28T12:48:14.716Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -114,7 +113,7 @@
               "RelativeDocumentMoniker": "Resources\\Raw\\babylonView.txt",
               "ToolTip": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\Resources\\Raw\\babylonView.txt",
               "RelativeToolTip": "Resources\\Raw\\babylonView.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAMoAAAAAAAAAAAA3wNQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2026-03-01T14:30:01.419Z",
               "IsPinned": true,
