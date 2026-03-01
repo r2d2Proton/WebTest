@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|e:\\dev\\repos\\r2d2proton\\webtest\\resources\\raw\\babylonview.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|solutionrelative:resources\\raw\\babylonview.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|e:\\dev\\repos\\r2d2proton\\webtest\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|solutionrelative:pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|e:\\dev\\repos\\r2d2proton\\webtest\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|solutionrelative:pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|e:\\dev\\repos\\r2d2proton\\webtest\\utilities\\assetloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|solutionrelative:utilities\\assetloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|e:\\dev\\repos\\r2d2proton\\webtest\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|e:\\dev\\repos\\r2d2proton\\webtest\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF192EC-AA5A-E08D-9244-DACACC8670E1}|WebTest.csproj|solutionrelative:appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-28T12:46:01.351Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "AppShell.xaml.cs",
+              "ToolTip": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\AppShell.xaml.cs",
+              "RelativeToolTip": "AppShell.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T12:46:55.078Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\Pages\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\MainPage.xaml",
+              "ToolTip": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\Pages\\MainPage.xaml",
+              "RelativeToolTip": "Pages\\MainPage.xaml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAA3wGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-28T12:48:04.616Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\Pages\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\MainPage.xaml.cs",
+              "ToolTip": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\Pages\\MainPage.xaml.cs",
+              "RelativeToolTip": "Pages\\MainPage.xaml.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAswC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T12:48:14.716Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AssetLoader.cs",
+              "DocumentMoniker": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\Utilities\\AssetLoader.cs",
+              "RelativeDocumentMoniker": "Utilities\\AssetLoader.cs",
+              "ToolTip": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\Utilities\\AssetLoader.cs",
+              "RelativeToolTip": "Utilities\\AssetLoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T14:34:27.776Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "babylonView.txt",
+              "DocumentMoniker": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\Resources\\Raw\\babylonView.txt",
+              "RelativeDocumentMoniker": "Resources\\Raw\\babylonView.txt",
+              "ToolTip": "E:\\Dev\\Repos\\r2d2Proton\\WebTest\\Resources\\Raw\\babylonView.txt",
+              "RelativeToolTip": "Resources\\Raw\\babylonView.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-01T14:30:01.419Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
