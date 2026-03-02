@@ -29,6 +29,12 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <toolkit:InvertedBoolConverter x:Key="InvertedBoolConverter" />
+
+            <Color x:Key="FocusedColor">#00A3FF</Color>
+            <Color x:Key="UnfocusedColor">Transparent</Color>
+            <toolkit:BoolToObjectConverter x:Key="FocusToColorConverter"
+                               TrueObject="{StaticResource FocusedColor}"
+                               FalseObject="{StaticResource UnfocusedColor}" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -40,6 +46,7 @@
                 <ScrollView>
                     <Grid Padding="{StaticResource LayoutPadding}" RowSpacing="{StaticResource LayoutSpacing}">
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
@@ -69,8 +76,163 @@
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
-                        <WebView Grid.Row="4" x:Name="MainWebView" HeightRequest="344" WidthRequest="644" />
-                        <Grid Grid.Row="5" MinimumHeightRequest="44">
+
+                        <!-- LOTTIE ROW -->
+                        <Grid Grid.Row="4" Padding="0,20" RowSpacing="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Three evenly spaced Lottie WebViews -->
+                            <Grid Grid.Row="0" ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Column="0"
+                                        x:Name="LottieLeftFrame"
+                                        Stroke="Transparent"
+                                        StrokeThickness="4"
+                                        StrokeShape="RoundRectangle 10"
+                                        BackgroundColor="Transparent"
+                                        Padding="0">
+                                    <WebView x:Name="LottieViewLeft"
+                                             HeightRequest="300"
+                                             HorizontalOptions="Fill"
+                                             Focused="OnLottieFocused"
+                                             Unfocused="OnLottieUnfocused"/>
+                                </Border>
+
+                                <Border Grid.Column="1"
+                                        x:Name="LottieMiddleFrame"
+                                        Stroke="Transparent"
+                                        StrokeThickness="4"
+                                        StrokeShape="RoundRectangle 10"
+                                        BackgroundColor="Transparent"
+                                        Padding="0">
+                                    <WebView x:Name="LottieViewMiddle"
+                                             HeightRequest="300"
+                                             HorizontalOptions="Fill"
+                                             Focused="OnLottieFocused"
+                                             Unfocused="OnLottieUnfocused"/>
+                                </Border>
+
+                                <Border Grid.Column="2"
+                                        x:Name="LottieRightFrame"
+                                        Stroke="Transparent"
+                                        StrokeThickness="4"
+                                        StrokeShape="RoundRectangle 10"
+                                        BackgroundColor="Transparent"
+                                        Padding="0">
+                                    <WebView x:Name="LottieViewRight"
+                                             HeightRequest="300"
+                                             HorizontalOptions="Fill"
+                                             Focused="OnLottieFocused"
+                                             Unfocused="OnLottieUnfocused"/>
+                                </Border>
+                            </Grid>
+
+                            <!-- Lottie Controls -->
+                            <VerticalStackLayout Grid.Row="1" 
+                                                 HorizontalOptions="Center"
+                                                 Spacing="10"
+                                                 Padding="0,10">
+                                <Label Text="Lottie Controls" 
+                                       HorizontalOptions="Center"
+                                       FontSize="12"/>
+                                <HorizontalStackLayout HorizontalOptions="Center"
+                                                       Spacing="20"
+                                                       Padding="0">
+                                    <Button Text="▶ Play"
+                                            Clicked="OnPlayLottieClicked"
+                                            Padding="15,8"
+                                            FontSize="14"/>
+                                    <Button Text="⏸ Pause"
+                                            Clicked="OnPauseLottieClicked"
+                                            Padding="15,8"
+                                            FontSize="14"/>
+                                    <Button Text="⏹ Stop"
+                                            Clicked="OnStopLottieClicked"
+                                            Padding="15,8"
+                                            FontSize="14"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Grid>
+
+                        <!-- ANIMATION ROW -->
+                        <Grid Grid.Row="5" Padding="0,20" RowSpacing="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Two evenly spaced Animation WebViews -->
+                            <Grid Grid.Row="0" ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Column="0"
+                                        x:Name="AnimationLeftFrame"
+                                        Stroke="Transparent"
+                                        StrokeThickness="4"
+                                        StrokeShape="RoundRectangle 10"
+                                        BackgroundColor="Transparent"
+                                        Padding="0">
+                                    <WebView x:Name="AnimationViewLeft"
+                                             HeightRequest="300"
+                                             HorizontalOptions="Fill"
+                                             Focused="OnAnimationFocused"
+                                             Unfocused="OnAnimationUnfocused"/>
+                                </Border>
+
+                                <Border Grid.Column="1"
+                                        x:Name="AnimationRightFrame"
+                                        Stroke="Transparent"
+                                        StrokeThickness="4"
+                                        StrokeShape="RoundRectangle 10"
+                                        BackgroundColor="Transparent"
+                                        Padding="0">
+                                    <WebView x:Name="AnimationViewRight"
+                                             HeightRequest="300"
+                                             HorizontalOptions="Fill"
+                                             Focused="OnAnimationFocused"
+                                             Unfocused="OnAnimationUnfocused"/>
+                                </Border>
+                            </Grid>
+
+                            <!-- Animation Controls -->
+                            <VerticalStackLayout Grid.Row="1"
+                                                 HorizontalOptions="Center"
+                                                 Spacing="10"
+                                                 Padding="0,10">
+                                <Label Text="Animation Controls"
+                                       HorizontalOptions="Center"
+                                       FontSize="12"/>
+                                <HorizontalStackLayout HorizontalOptions="Center"
+                                                       Spacing="20"
+                                                       Padding="0">
+                                    <Button Text="▶ Play"
+                                            Clicked="OnPlayAnimationClicked"
+                                            Padding="15,8"
+                                            FontSize="14"/>
+                                    <Button Text="⏸ Pause"
+                                            Clicked="OnPauseAnimationClicked"
+                                            Padding="15,8"
+                                            FontSize="14"/>
+                                    <Button Text="⏹ Stop"
+                                            Clicked="OnStopAnimationClicked"
+                                            Padding="15,8"
+                                            FontSize="14"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Grid>
+
+                        <Grid Grid.Row="6" MinimumHeightRequest="44">
                             <Label Text="Tasks" Style="{StaticResource Title2}" VerticalOptions="Center" SemanticProperties.HeadingLevel="Level1"/>
                             <ImageButton 
                                 Source="{StaticResource IconClean}"
@@ -83,7 +245,7 @@
                                 Command="{Binding CleanTasksCommand}"
                                 SemanticProperties.Description="Clean tasks" />
                         </Grid>
-                        <VerticalStackLayout Grid.Row="6" Spacing="15"
+                        <VerticalStackLayout Grid.Row="7" Spacing="15"
                             BindableLayout.ItemsSource="{Binding Tasks}">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>

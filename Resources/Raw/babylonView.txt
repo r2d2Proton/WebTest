@@ -89,6 +89,7 @@
         <div class="status-line"><span class="status-label">Lottie Data:</span> <span id="lottieDataStatus">-</span></div>
         <div class="status-line"><span class="status-label">Texture:</span> <span id="textureStatus">-</span></div>
         <div class="status-line"><span class="status-label">Render Loop:</span> <span id="renderStatus">-</span></div>
+        <div class="status-line"><span class="status-label">Animation State:</span> <span id="animationState">-</span></div>
         <div class="status-line" id="errorLine" style="display:none;"><span class="status-label">Error:</span> <span id="errorMsg" class="status-error">-</span></div>
     </div>
 
@@ -98,7 +99,50 @@
         let box;
         let mat;
         let lottieTexture;
+        let currentLottieAnimation = null;
         let lottieFiles = [];
+
+        window.play = function() {
+            try {
+                if (lottieTexture) {
+                    lottieTexture.lottieAnimation.play();
+                    updateStatus('animationState', 'Playing', 'status-success');
+                    console.log('Play called');
+                } else {
+                    console.warn('Lottie texture not available or play method not found');
+                }
+            } catch (error) {
+                console.error('Play error:', error);
+            }
+        };
+
+        window.pause = function() {
+            try {
+                if (lottieTexture) {
+                    lottieTexture.lottieAnimation.pause();
+                    updateStatus('animationState', 'Paused', 'status-loading');
+                    console.log('Pause called');
+                } else {
+                    console.warn('Lottie texture not available or pause method not found');
+                }
+            } catch (error) {
+                console.error('Pause error:', error);
+            }
+        };
+
+        window.stop = function() {
+            try {
+                if (lottieTexture) {
+                    lottieTexture.lottieAnimation.stop();
+                    updateStatus('animationState', 'Stopped', 'status-error');
+                    console.log('Stop called');
+                } else {
+                    console.warn('Lottie texture not available or stop method not found');
+                }
+            } catch (error) {
+                console.error('Stop error:', error);
+            }
+        };
 
         function updateStatus(id, message, className = '') {
             const element = document.getElementById(id);
@@ -170,9 +214,11 @@
                 // Create new Lottie texture
                 updateStatus('textureStatus', 'Creating texture...', 'status-loading');
                 lottieTexture = LOTTIE.LottieTexture.ParseFromObject(file.name, lottieObject, scene);
+                currentLottieAnimation = lottieTexture;
                 mat.albedoTexture = lottieTexture;
                 mat.unlit = true;
                 updateStatus('textureStatus', 'Applied', 'status-success');
+                updateStatus('animationState', 'Loaded', 'status-success');
 
                 updateStatus('status', 'Ready', 'status-success');
             } catch (error) {
