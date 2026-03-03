@@ -9,7 +9,8 @@ public partial class MainPage : ContentPage
     enum BabylonModels
     {
         PlaneModel,
-        LottieModel
+        LottieModel,
+        SceneModel
     };
 
     HtmlWebViewSource babylonPlaneModel = new HtmlWebViewSource
@@ -23,6 +24,10 @@ public partial class MainPage : ContentPage
     };
 
     HtmlWebViewSource babylonLottieModel = new HtmlWebViewSource
+    {
+    };
+
+    HtmlWebViewSource babylonSceneModel = new HtmlWebViewSource
     {
     };
 
@@ -40,7 +45,7 @@ public partial class MainPage : ContentPage
             LottieViewRight.Source = await GetModelAsync(BabylonModels.LottieModel);
 
             AnimationViewLeft.Source = await GetModelAsync(BabylonModels.PlaneModel);
-            AnimationViewRight.Source = await GetModelAsync(BabylonModels.PlaneModel);
+            AnimationViewRight.Source = await GetModelAsync(BabylonModels.SceneModel);
         };
     }
 
@@ -52,9 +57,18 @@ public partial class MainPage : ContentPage
                 return babylonPlaneModel;
 
             case BabylonModels.LottieModel:
-                string txt = await AssetLoader.LoadTextFileAsync("babylonView.txt");
+            {
+                string txt = await AssetLoader.LoadTextFileAsync("BabylonLottieView.txt");
                 babylonLottieModel.Html = txt;
                 return babylonLottieModel;
+            }
+
+            case BabylonModels.SceneModel:
+            {
+                string txt = await AssetLoader.LoadTextFileAsync("BabylonSceneView.txt");
+                babylonSceneModel.Html = txt;
+                return babylonSceneModel;
+            }
 
             default:
                 return babylonPlaneModel;

@@ -99,7 +99,6 @@
         let box;
         let mat;
         let lottieTexture;
-        let currentLottieAnimation = null;
         let lottieFiles = [];
 
         window.play = function() {
@@ -108,8 +107,6 @@
                     lottieTexture.lottieAnimation.play();
                     updateStatus('animationState', 'Playing', 'status-success');
                     console.log('Play called');
-                } else {
-                    console.warn('Lottie texture not available or play method not found');
                 }
             } catch (error) {
                 console.error('Play error:', error);
@@ -122,8 +119,6 @@
                     lottieTexture.lottieAnimation.pause();
                     updateStatus('animationState', 'Paused', 'status-loading');
                     console.log('Pause called');
-                } else {
-                    console.warn('Lottie texture not available or pause method not found');
                 }
             } catch (error) {
                 console.error('Pause error:', error);
@@ -136,8 +131,6 @@
                     lottieTexture.lottieAnimation.stop();
                     updateStatus('animationState', 'Stopped', 'status-error');
                     console.log('Stop called');
-                } else {
-                    console.warn('Lottie texture not available or stop method not found');
                 }
             } catch (error) {
                 console.error('Stop error:', error);
@@ -165,7 +158,7 @@
                 updateStatus('status', 'Fetching file list...', 'status-loading');
                 
                 // Fetch the GitHub API to get files in the directory
-                const response = await fetch('https://api.github.com/repos/r2d2Proton/LottieSamples/contents/Assets/LottieFiles');
+                const response = await fetch('https://api.github.com/repos/r2d2Proton/PublicSamples/contents/Assets/LottieFiles');
                 const files = await response.json();
                 
                 lottieFiles = files
@@ -214,7 +207,6 @@
                 // Create new Lottie texture
                 updateStatus('textureStatus', 'Creating texture...', 'status-loading');
                 lottieTexture = LOTTIE.LottieTexture.ParseFromObject(file.name, lottieObject, scene);
-                currentLottieAnimation = lottieTexture;
                 mat.albedoTexture = lottieTexture;
                 mat.unlit = true;
                 updateStatus('textureStatus', 'Applied', 'status-success');
